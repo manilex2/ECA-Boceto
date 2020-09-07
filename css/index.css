@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------Imagenes de fondo------------------------------------------------*/
+.bgimg1, .bgimg2, .bgimg3, .bgimg4 {
+    position: relative;
+    opacity: 1;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgimg1 {
+    background-image: url("../image/fondo1.jpg");
+}
+
+.bgimg2 {
+    background-image: url("../image/fondo2.jpg");
+}
+
+.bgimg3{
+    background-image: url("../image/fondo3.jpg");
+}
+
+.bgimg4{
+    background-image: url("../image/fondo4.jpg");
+}
+
+.seccion{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+/*-------------------------------------------------------------Consulta de Medios-------------------------------------------------*/
+@media only screen and (max-device-width: 1024px) {
+    .bgimg1, .bgimg2, .bgimg3, .bgimg4 {
+      background-attachment: scroll;
+    }
+  }
