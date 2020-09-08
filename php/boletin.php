@@ -7,8 +7,6 @@
 
     $conexion = mysqli_connect($db_host, $db_usuario, $db_contra, $db_nombre, $db_puerto);
 
-    $servidor = $_SERVER["HTTP_HOST"];
-
     if(mysqli_connect_errno()){
             
         echo "Fallo al conectar con la BBDD";
@@ -31,6 +29,8 @@
     }else{
             
         echo "<h2>Registro en boletin exitoso!</h2>";
+
+        echo "<p>Se ha enviado un correo a <span style='font-weight: bold;'>$email_boletin</span> confirmando la suscripción</p>";
             
         mysqli_stmt_close($resultado);
 

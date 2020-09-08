@@ -1,12 +1,8 @@
-﻿<?php
+<?php
  
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
     
-    require 'PHPMailer/Exception.php';
-    require 'PHPMailer/PHPMailer.php';
-    require 'PHPMailer/SMTP.php';
-
     // La instanciación y el paso de `true` habilita excepciones
 $mail = new PHPMailer(true);
 
@@ -30,13 +26,13 @@ try {
 
     //Recipientes
     $mail->setFrom('contacto.codigomanny@gmail.com', 'Codigo Manny');
-    $mail->addAddress($email_boletin);               // Nombre es opcional
+    $mail->addAddress($email_modal);               // Nombre es opcional
    
     // Contenido
     $mail->isHTML(true);                                  // Establezca el formato de email en HTML
-    $mail->Subject = "Hola $nombre_boletin $apellido_boletin! bienvenido a nuestro boletin.";
-    $mail->Body    = "<h1>¡GRACIAS POR REGISTRARTE EN NUESTRO BOLETIN!</h1>
-                      <p>$nombre_boletin, gracias por registrarte te estaremos enviando información por este medio con nuestras actualizaciones.</p>
+    $mail->Subject = "Hola $nombre_modal $apellido_modal! Tu mensaje se ha enviado exitosamente a Essential Coaching Academy.";
+    $mail->Body    = "<h1>¡GRACIAS POR CONTACTARNOS!</h1>
+                      <p>$nombre_modal, gracias por contactarnos, a la brevedad posible te estaremos contactando.</p>
                       <br/><p style='text-align:center'>Atentamente.</p><br/>
                       <p style='text-align: center; font-weight: bold;'>Adriana Maldonado & Jesús Soto</p>
                       <p style='text-align: center; font-weight: bold;'>Life coachings</p>
